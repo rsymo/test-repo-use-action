@@ -32,3 +32,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: call my custom action
         uses: rsymo/lifx-js-action@main
+
