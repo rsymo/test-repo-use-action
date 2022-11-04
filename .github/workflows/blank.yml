@@ -46,7 +46,7 @@ jobs:
           COLOUR: orange
 
 
-      # Pass the red to the light, if the status is failed
+      # Pass red to the light, if the status is failed
       - name: call my custom action
         if: failure()
         uses: rsymo/lifx-js-action@main
@@ -55,7 +55,7 @@ jobs:
           LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
           COLOUR: red
 
-      # Pass the green to the light, if the status is success
+      # Pass green to the light, if the status is success
       - name: call my custom action
         if: success()
         uses: rsymo/lifx-js-action@main
@@ -64,4 +64,12 @@ jobs:
           LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
           COLOUR: green
 
+      # Pass black to the light, this will turn it off
+      - name: call my custom action
+        if: success()
+        uses: rsymo/lifx-js-action@main
+        with:
+          LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
+          LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
+          COLOUR: black
 
