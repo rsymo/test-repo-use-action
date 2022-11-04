@@ -64,6 +64,10 @@ jobs:
           LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
           COLOUR: green
 
+      - name: Sleep 10 seconds to see the effect
+        if: success()
+        run: sleep 10s
+        
       # Pass black to the light, this will turn it off
       - name: call my custom action
         if: success()
