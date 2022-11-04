@@ -40,8 +40,8 @@ jobs:
         run: sleep 10s          
 
     # To break the build uncomment the next two lines
-      - run: npm install
-      - run: npm test
+    #  - run: npm install
+    #  - run: npm test
     ##
 
 
