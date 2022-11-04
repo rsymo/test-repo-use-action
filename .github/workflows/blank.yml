@@ -39,6 +39,12 @@ jobs:
       - name: Sleep 10 seconds to see the effect
         run: sleep 10s          
 
+    # To break the build uncomment the next two lines
+      - run: npm install
+      - run: npm test
+    ##
+
+
       # Pass orange to the light, if the status is cancelled
       - name: call my custom action
         if: cancelled()
