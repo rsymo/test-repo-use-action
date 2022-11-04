@@ -30,11 +30,14 @@ jobs:
         run: echo Hello, world!
 
       # Set the light Blue to initiate (default colour is blue)
-      - name: call my custom action
+      - name: Set the light blue
         uses: rsymo/lifx-js-action@main
         with:
           LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
           LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
+          
+      - name: Sleep 10 seconds to see the effect
+        run: sleep 10s          
 
       # Pass orange to the light, if the status is cancelled
       - name: call my custom action
