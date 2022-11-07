@@ -46,7 +46,7 @@ jobs:
 
 
       # Pass orange to the light, if the status is cancelled
-      - name: call my custom action
+      - name: Pass orange to the light, if the status is cancelled
         if: cancelled()
         uses: rsymo/lifx-js-action@main
         with:
@@ -56,7 +56,7 @@ jobs:
 
 
       # Pass red to the light, if the status is failed
-      - name: call my custom action
+      - name: Pass red to the light, if the status is failed
         if: failure()
         uses: rsymo/lifx-js-action@main
         with:
@@ -65,7 +65,7 @@ jobs:
           COLOUR: red
 
       # Pass green to the light, if the status is success
-      - name: call my custom action
+      - name: Pass green to the light, if the status is success
         if: success()
         uses: rsymo/lifx-js-action@main
         with:
@@ -77,8 +77,8 @@ jobs:
         if: success()
         run: sleep 10s
         
-      # Pass black to the light, this will turn it off
-      - name: call my custom action
+      # SEcond step for the Success condition - Pass black to the light, this will turn it off
+      - name: Pass black to the light, this will turn off the light
         if: success()
         uses: rsymo/lifx-js-action@main
         with:
